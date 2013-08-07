@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/lib/bootstrap.css"
+    type="text/css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row input_table">
+            <div class="span3">
+                <input class="section" type="text" placeholder="section">
+            </div>
+        </div>
+        <div class="row input_table">
+            <div class="span3">
+                <input class="name" type="text" placeholder="name">
+            </div>
+            <div class="span3">
+                <input class="url" type="text" placeholder="url">
+            </div>
+            <div class="span2">
+                <button id="add" class="btn">Add</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="../static/lib/yui-min.js"></script>
+        <script type="text/javascript" src="../static/lib/uri.js"></script>
+        <script type="text/javascript" src="../static/lib/urn.js"></script>
+        <script type="text/javascript" src="../static/lib/jsv.js"></script>
+        <!-- <script type="text/javascript" src="../static/lib/environments.js"></script> -->
+        <script type="text/javascript" src="../static/lib/json-schema-draft-01.js"></script>
+        <script type="text/javascript" src="../static/lib/json-schema-draft-02.js"></script>
+        <script type="text/javascript" src="../static/lib/json-schema-draft-03.js"></script>
+        <script type="text/javascript" src="../static/lib/tv4.js"></script>
+        
+        <script>
+            YUI().use('node', 'event', function(Y) {
+                var button = Y.one("#add");
+                
+                button.on('click', function(e) {
+                    var name  = Y.one('.name').get('value');
+                    var url   = Y.one('.name').get('value');
+                    Y.log(url);
+                    var json = {
+                            "iamastring": "123"
+                    };
+                    var schema = {
+                            description : "My schema",
+                            type : "object",
+                            additionalProperties : false,
+                            properties : {
+                                "iamastring" : {
+                                    type : "string",
+                                    required : true
+                                }
+                            }
+                    };
+                    var valid = tv4.validate(json, schema); 
+                    /* var JSV = require("./jsv").JSV;
+                    var schema = {
+                   	    description : "My schema",
+                   	    type : "object",
+                   	    additionalProperties : false,
+                   	    properties : {
+                   	        "iamastring" : {
+                   	            type : "string",
+                   	            required : true
+                   	        }
+                   	    }
+                    };
+                    var json = {
+                    	    "iamastring": "123"
+                    };
+                    var env = JSV.createEnvironment();
+                    var report = env.validate(json, schema);
+
+                    if (report.errors.length === 0) {
+                        //JSON is valid against the schema
+                    }
+                    */ 
+                
+                });
+            
+            });
+            
+        </script>
+</body>
+</html>

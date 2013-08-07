@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/lib/bootstrap.css"
+	type="text/css">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="row input_table">
+			<div class="span3">
+				<input class="name" type="text" placeholder="name">
+			</div>
+			<div class="span3">
+				<input class="url" type="text" placeholder="url">
+			</div>
+			<div class="span2">
+				<button id="Add" class="btn">Add</button>
+			</div>
+		</div>
+		<script src="../static/lib/yui-min.js"></script>
+		<script>
+            YUI().use('node', 'event', function(Y) {
+                var button = Y.one("#Add");
+                
+                button.on('click', function(e) {
+                	var condition = new Object();
+                	condition = {"range" : {"min" : "2","max" : "4"}}
+                	
+                	switch(condition)
+                	{
+                	case condition["range"]:
+                	  
+                	  break;
+                	case 2:
+                	  
+                	  break;
+                	default:
+                	  Y.log("asdf");
+                	}
+                	
+                	
+                	
+                });
+            
+            });
+        </script>
+</body>
+</html>

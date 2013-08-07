@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-log
+END
+yui-log.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-log/yui-log.js
+END
+yui-log-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-log/yui-log-min.js
+END
+yui-log-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-log/yui-log-debug.js
+END
+yui-log-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-log/yui-log-coverage.js
+END

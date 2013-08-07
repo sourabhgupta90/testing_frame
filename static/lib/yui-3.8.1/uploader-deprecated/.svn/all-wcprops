@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-deprecated
+END
+uploader-deprecated.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-deprecated/uploader-deprecated.js
+END
+uploader-deprecated-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-deprecated/uploader-deprecated-min.js
+END
+uploader-deprecated-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-deprecated/uploader-deprecated-debug.js
+END
+uploader-deprecated-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-deprecated/uploader-deprecated-coverage.js
+END

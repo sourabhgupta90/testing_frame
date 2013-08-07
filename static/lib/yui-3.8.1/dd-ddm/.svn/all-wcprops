@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/dd-ddm
+END
+dd-ddm.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/dd-ddm/dd-ddm.js
+END
+dd-ddm-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/dd-ddm/dd-ddm-min.js
+END
+dd-ddm-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/dd-ddm/dd-ddm-debug.js
+END
+dd-ddm-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/dd-ddm/dd-ddm-coverage.js
+END

@@ -1,0 +1,101 @@
+<head>
+    <!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../static/lib/bootstrap.css"
+    type="text/css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row section_name">
+            <div class="span3">
+                <input class="section" type="text" placeholder="section">
+            </div>
+        </div>
+        <div class="row info">
+            <div class="span3">
+                <input class="name" type="text" placeholder="name">
+            </div>
+            <div class="span3">
+                <input class="url" type="text" placeholder="url">
+            </div>
+            <div class="span2">
+                <button id="add" class="btn">Add</button>
+            </div>
+        </div>
+        <div class=" row links">
+            
+        </div>
+        <script src="../static/lib/yui-min.js"></script>
+        <script src="http://yui.yahooapis.com/3.10.0/build/yui/yui-min.js"></script>
+        <script>
+            YUI().use('node', 'event', function(Y) {
+                var button = Y.one("#add");
+                
+                button.on('click', function(e) {
+                    var name  = Y.one('.name').get('value');
+                    var url   = Y.one('.url').get('value');
+                    var section  = Y.one('.section').get('value');
+                    var url_node = Y.Node.create('<h5><a href='+url+'>'+name+'</a></h5>');
+                     
+                    Y.one('.links').append(url_node);   
+                });
+            
+            });
+         </script>
+         <script>
+            
+            YUI().use('model', function (Y) {
+                    // Create a new Y.PieModel class that extends Y.Model.
+                Y.PieModel = Y.Base.create('pieModel', Y.Model, [], {
+                  // Add prototype methods for your Model here if desired. These methods will be
+                  // available to all instances of your Model.
+
+                  // Returns true if all the slices of the pie have been eaten.
+                  allGone: function () {
+                    return this.get('slices') === 0;
+                  },
+
+                  // Consumes a slice of pie, or fires an `error` event if there are no slices
+                  // left.
+                  eatSlice: function () {
+                    if (this.allGone()) {
+                      this.fire('error', {
+                        type : 'eat',
+                        error: "Oh snap! There isn't any pie left."
+                      });
+                    } else {
+                      this.set('slices', this.get('slices') - 1);
+                      Y.log('You just ate a slice of delicious ' + this.get('type') + ' pie!');
+                    }
+                  }
+                }, {
+                  ATTRS: {
+                    // Add custom model attributes here. These attributes will contain your
+                    // model's data. See the docs for Y.Attribute to learn more about defining
+                    // attributes.
+
+                    slices: {
+                      value: 6 // default value
+                    },
+
+                    type: {
+                      value: 'apple'
+                    }
+                  }
+                });
+                
+                var pecanPie = new Y.PieModel({type: 'pecan'});
+
+                pecanPie.on('error', function (e) {
+                  Y.log(e.error);
+                });
+
+                pecanPie.eatSlice(); // => "You just ate a slice of delicious pecan pie!"
+                Y.log(pecanPie.get('slices')); // => 5
+
+            });
+        </script>
+      </body>
+</html>

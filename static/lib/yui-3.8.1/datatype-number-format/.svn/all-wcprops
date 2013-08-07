@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatype-number-format
+END
+datatype-number-format.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatype-number-format/datatype-number-format.js
+END
+datatype-number-format-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatype-number-format/datatype-number-format-min.js
+END
+datatype-number-format-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatype-number-format/datatype-number-format-debug.js
+END
+datatype-number-format-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatype-number-format/datatype-number-format-coverage.js
+END

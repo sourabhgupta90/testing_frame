@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/event-flick
+END
+event-flick.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/event-flick/event-flick.js
+END
+event-flick-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/event-flick/event-flick-min.js
+END
+event-flick-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/event-flick/event-flick-debug.js
+END
+event-flick-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/event-flick/event-flick-coverage.js
+END

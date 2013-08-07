@@ -1,0 +1,100 @@
+<html>
+
+	<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet"
+  		href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" type="text/css">
+
+
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<div class="row">
+				<div class="offset3 span4">
+				  		<label>Find the efficiency of the day</label>
+			  	</div>
+			</div>  	
+			
+			<div class="row">
+			  <div class="span6">
+			  	<input  id = 'day_1' type= "text">
+			  </div>
+			  <div class="span4 offset2">
+			  	<input  id = 'day_2' type= "text">
+			  </div>
+			</div>
+			
+			<div class="row">
+			  <div class="span6">
+			  	<input  id = 'day_3' type= "text">
+			  </div>
+			  <div class="span4 offset2">
+			  	<input  id = 'day_4' type= "text">
+			  </div>
+			</div>
+			
+						
+			<div class="row">
+			  <div class="offset3 span4">
+			  	<input id = 'today' type= "text">
+			  </div>
+			</div>
+			
+			<div class="row">	
+		  		<div class="offset4 span4">
+			  		<button class="btn" id="efficiency_button">Find</button>
+		  		</div>	
+			</div>
+			
+		</div>
+		<script src="http://yui.yahooapis.com/3.2.0/build/yui/yui-min.js"></script>  
+		<script>  
+		
+		YUI().use('node', 'event', function (Y) {
+   			 
+   			
+   			var button = Y.one("#efficiency_button");
+   			
+			button.on('click', function (e) {
+			    // `this` is the button Node, NOT the DOM element
+			    this.get('id'); // ==> 'readygo' (from <button id="readygo">...</button>)
+
+			    var day_1 = parseInt(Y.one('#day_1').get('value'));
+			    var day_2 = parseInt(Y.one('#day_2').get('value'));
+			    var day_3 = parseInt(Y.one('#day_3').get('value'));
+			    var day_4 = parseInt(Y.one('#day_4').get('value'));
+			    
+			    var avg = (day_1 + day_2 + day_3 + day_4)/4;
+
+			    var today = Y.one('#today').get('value');
+			    var efficiency;
+			    if (avg > today){
+			    	efficiency = ((avg - today)/avg) * 100;
+			    	
+			    }else{
+			    	efficiency = 0;	
+			    }
+			    efficiency  = efficiency + ' percentage';
+			    efficiency_node = Y.Node.create('<p>'+efficiency +'</p>');
+			    Y.one("#efficiency_button").ancestor().insertBefore(efficiency_node);
+				Y.log(efficiency);
+
+
+
+				// Event properties that point to the DOM are also Node instances
+			    //e.target.get('id'); // => 'readygo'
+
+			    // Stop the event's default behavior
+			    //e.preventDefault();
+
+			    // Stop the event from bubbling up the DOM tree
+			    //e.stopPropagation();
+			});
+		});
+		</script> 
+	
+	</body>
+
+</html>

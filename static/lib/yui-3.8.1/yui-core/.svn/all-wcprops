@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-core
+END
+yui-core-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-core/yui-core-coverage.js
+END
+yui-core.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-core/yui-core.js
+END
+yui-core-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-core/yui-core-min.js
+END
+yui-core-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/yui-core/yui-core-debug.js
+END

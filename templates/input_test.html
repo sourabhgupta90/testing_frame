@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/lib/bootstrap.css"
+    type="text/css">
+</head>
+<body>
+
+    <div class="container">
+
+        
+        <div class="row info">
+            <div class="span3">
+                <input class="name" type="text"  placeholder="name">
+            </div>
+            <div class="span2">
+                <button id="add" class="btn">Add</button>
+            </div>
+        </div>
+        <div class=" row links">
+            
+        </div>
+        <script src="../static/lib/yui-min.js"></script>
+        <script>
+            YUI().use('node', 'event', function(Y) {
+                var button = Y.one("#add");
+                
+                button.on('click', function(e) {
+                    var name  = Y.one('.name').get('value');
+                    var myRe = /[^0-9]+/;
+                    myArray = myRe.exec(name)   
+                });
+            
+            });
+            
+        </script>
+</body>
+</html>

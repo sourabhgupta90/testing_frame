@@ -1,0 +1,159 @@
+from reportlab.platypus import *
+from reportlab.lib import colors
+from reportlab.pdfgen import canvas
+
+import time
+from reportlab.lib.enums import TA_JUSTIFY
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import inch
+
+def hello(c):
+    c.drawString(100,100,"Hello World")
+
+def main():
+    #c = canvas.Canvas("hello.pdf")
+    #hello(c)
+    #c.showPage()
+    #c.save()
+    doc = SimpleDocTemplate('rl_hello_table.pdf')
+    data=[
+           [
+              "Caves",
+              "Wumpus Population",
+              
+           ],
+           [
+              "Deep Ditch",
+              50
+           ],
+           [
+              "Death Gully",
+              5000
+           ],
+           [
+              "Dire Straits",
+              600
+           ],
+           [
+              "sdddddddddddddd Pit",
+              5
+           ],
+           [
+              "ddddon",
+              "Rusddssssssssss!"
+           ]
+        ]
+    #table_sheet(doc,'sdsdds',data)
+    make_paragraph_2()
+
+def make_paragraph():
+    doc = SimpleDocTemplate("form_letter.pdf",pagesize=letter,
+                        rightMargin=72,leftMargin=72,
+                        topMargin=72,bottomMargin=18)
+    Story=[]
+    logo = "python_logo.png"
+    magName = "Pythonista"
+    issueNum = 12
+    subPrice = "99.00"
+    limitedDate = "03/05/2010"
+    freeGift = "tin foil hat"
+     
+    formatted_time = time.ctime()
+    full_name = "Mike Driscoll"
+    address_parts = ["411 State St.", "Marshalltown, IA 50158"]
+     
+    im = Image(logo, 2*inch, 2*inch)
+    Story.append(im)
+     
+    styles=getSampleStyleSheet()
+    styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
+    ptext = '<font size=12>%s</font>' % formatted_time
+     
+    Story.append(Paragraph(ptext, styles["Normal"]))
+    Story.append(Spacer(1, 12))
+     
+    # Create return address
+    ptext = '<font size=12>%s</font>' % full_name
+    Story.append(Paragraph(ptext, styles["Normal"]))       
+    for part in address_parts:
+        ptext = '<font size=12>%s</font>' % part.strip()
+        Story.append(Paragraph(ptext, styles["Normal"]))   
+     
+    Story.append(Spacer(1, 12))
+    ptext = '<font size=12>Dear %s:</font>' % full_name.split()[0].strip()
+    Story.append(Paragraph(ptext, styles["Normal"]))
+    Story.append(Spacer(1, 12))
+     
+    ptext = '<font size=12>We would like to welcome you to our subscriber base for %s Magazine! \
+            You will receive %s issues at the excellent introductory price of $%s. Please respond by\
+            %s to start receiving your subscription and get the following free gift: %s.</font>' % (magName, 
+                                                                                                    issueNum,
+                                                                                                    subPrice,
+                                                                                                    limitedDate,
+                                                                                                    freeGift)
+    Story.append(Paragraph(ptext, styles["Justify"]))
+    Story.append(Spacer(1, 12))
+     
+     
+    ptext = '<font size=12>Thank you very much and we look forward to serving you.</font>'
+    Story.append(Paragraph(ptext, styles["Justify"]))
+    Story.append(Spacer(1, 12))
+    ptext = '<font size=12>Sincerely,</font>'
+    Story.append(Paragraph(ptext, styles["Normal"]))
+    Story.append(Spacer(1, 48))
+    ptext = '<font size=12>Ima Sucker</font>'
+    Story.append(Paragraph(ptext, styles["Normal"]))
+    Story.append(Spacer(1, 12))
+    doc.build(Story)
+    
+def form():
+    a = canvas.Canvas("form.pdf")
+    a.setLineWidth(.3)
+    a.setFont('Helvetica', 12)
+     
+    a.drawString(30,750,'OFFICIAL COMMUNIQUE')
+    a.drawString(30,735,'OF ACME INDUSTRIES')
+    a.drawString(500,750,"12/12/2010")
+    a.line(480,747,580,727)
+     
+    a.drawString(275,725,'AMOUNT OWED:')
+    a.drawString(500,725,"$1,000.00")
+    a.line(378,723,580,723)
+     
+    a.drawString(30,703,'RECEIVED BY:')
+    a.line(120,700,580,700)
+    a.drawString(120,703,"JOHN DOE")
+     
+    a.save()
+    
+def table_sheet(doc,label , data):
+    # Our container for 'Flowable' objects
+    elements = []
+    # A large collection of style sheets pre-made for us
+    styles = getSampleStyleSheet()
+     
+    # A basic document for us to write to 'rl_hello_table.pdf'
+    elements.append( Paragraph( label, styles['Title'] ))
+     
+    # First the top row, with all the text centered and in Times-Bold,
+    # and one line above, one line below.
+    ts = [('ALIGN', (1,1), (-1,-1), 'CENTER'),
+         ('LINEABOVE', (0,0), (-1,0), 1, colors.purple),
+         ('LINEBELOW', (0,0), (-1,0), 1, colors.purple),
+         ('FONT', (0,0), (-1,0), 'Times-Bold'),
+     
+    # The bottom row has one line above, and three lines below of
+    # various colors and spacing.
+         ('LINEABOVE', (0,-1), (-1,-1), 1, colors.purple),
+         ('LINEBELOW', (0,-1), (-1,-1), 0.5, colors.purple,1, None, None, 4,1),
+         ('LINEBELOW', (0,-1), (-1,-1), 1, colors.red),
+         ('FONT', (0,-1), (-1,-1), 'Times-Bold')]
+     
+    table = Table(data, style=ts)
+    elements.append(table)
+    doc.build(elements)
+
+if __name__=="__main__":
+    main()

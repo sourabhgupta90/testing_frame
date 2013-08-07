@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatable-core
+END
+datatable-core.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatable-core/datatable-core.js
+END
+datatable-core-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatable-core/datatable-core-min.js
+END
+datatable-core-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatable-core/datatable-core-debug.js
+END
+datatable-core-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/datatable-core/datatable-core-coverage.js
+END

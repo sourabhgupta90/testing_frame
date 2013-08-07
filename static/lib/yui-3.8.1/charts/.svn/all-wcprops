@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/charts
+END
+charts.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/charts/charts.js
+END
+charts-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/charts/charts-min.js
+END
+charts-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/charts/charts-debug.js
+END
+charts-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/charts/charts-coverage.js
+END

@@ -1,0 +1,142 @@
+<head>
+<!DOCTYPE html>
+<html>
+
+<style>
+#thumbs {
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+#thumbs img,#largeImage {
+	border: 1px solid gray;
+	padding: 4px;
+	background-color: white;
+	cursor: pointer;
+}
+
+#thumbs img {
+	float: left;
+	margin-right: 6px;
+}
+
+#description {
+	background: black;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	padding: 10px 20px;
+	width: 525px;
+	margin-left: 315px;
+}
+
+#panel {
+	position: relative;
+}
+
+.img1_thumb {
+	position: relative;
+	background: url(image_01_thumb.jpg) -232px -206px no-repeat;
+	display: inline-block;
+	height: 50px;
+	width: 90px;
+	padding: 58px 0 0 35px;
+}
+
+.img2_thumb {
+	position: relative;
+	background: url(image_02_thumb.jpg) -232px -206px no-repeat;
+	display: inline-block;
+	display: inline-block;
+	height: 50px;
+	width: 90px;
+	padding: 58px 0 0 35px;
+}
+
+.img3_thumb {
+	position: relative;
+	background: url(image_03_thumb.jpg) -232px -206px no-repeat;
+	display: inline-block;
+	height: 50px;
+	width: 90px;
+	padding: 58px 0 0 35px;
+}
+
+.img4_thumb {
+	background: url(image_04_thumb.jpg) -232px -206px no-repeat;
+	position: relative;
+	display: inline-block;
+	height: 50px;
+	width: 90px;
+	padding: 58px 0 0 35px;
+}
+
+.img1_large {
+	position: relative;
+	background: url(image_01_large.jpg);
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	padding: 58px 0 0 35px;
+}
+
+.img2_large {
+	position: relative;
+	background: url(image_02_large.jpg);
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	padding: 58px 0 0 35px;
+}
+
+.img3_large {
+	position: relative;
+	background: url(image_03_large.jpg);
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	padding: 58px 0 0 35px;
+}
+
+.img4_large {
+	background: url(image_04_large.jpg);
+	position: relative;
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	padding: 58px 0 0 35px;
+}
+</style>
+
+</head>
+<body>
+
+	<div id="gallery">
+		<div id="panel">
+			<!-- by default img1_large is first image on the thumb nail -->
+			<div id="largeImage" class="img1_large"></div>
+			<div id="description">First image description</div>
+		</div>
+
+		<div id="thumbs">
+			<div class="img1_thumb" image_desc="image-1"></div>
+			<div class="img2_thumb" image_desc="image-2"></div>
+			<div class="img3_thumb" image_desc="image-3"></div>
+			<div class="img4_thumb" image_desc="image-4"></div>
+		</div>
+	</div>
+	<script type="text/javascript"
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		// there are four thumb and four large image css class   
+		$('#thumbs div').click(
+				function() {
+					$('#largeImage').attr('class',
+							//this script change the name of class e.g imgx_thumb to imgx_large
+							$(this).attr('class').replace('thumb', 'large'));
+					$('#description').html($(this).attr('image_desc'));
+				});
+	</script>
+</body>
+</html>

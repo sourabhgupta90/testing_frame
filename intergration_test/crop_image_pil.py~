@@ -1,0 +1,36 @@
+from PIL import Image
+img = Image.open('IconsPDF.jpeg')
+
+
+
+left = 82
+top = 10
+width = 38
+height = 28
+
+box = (left, top, left+width, top+height)
+area = img.crop(box)
+area.save('icon4', 'jpeg')
+
+left = 46
+top = 10
+width = 28
+height = 25
+
+
+left = 7
+top = 13
+width = 27
+height = 25
+
+
+
+left = 10
+top = 57
+width = 705
+height = 30
+
+
+
+
+

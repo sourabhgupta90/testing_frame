@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-queue
+END
+uploader-queue-coverage.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-queue/uploader-queue-coverage.js
+END
+uploader-queue.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-queue/uploader-queue.js
+END
+uploader-queue-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-queue/uploader-queue-min.js
+END
+uploader-queue-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/PatientManagement/!svn/ver/916/trunk/static/libs/yui-3.8.1/uploader-queue/uploader-queue-debug.js
+END
