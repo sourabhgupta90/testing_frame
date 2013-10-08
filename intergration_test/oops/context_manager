@@ -1,0 +1,10 @@
+class Dummy:
+   def __enter__(self):
+       return self
+
+   def __exit__(self, type, value, traceback):
+       print "Destroying", self
+
+with Dummy() as dummy:
+    # Do whatever you want with dummy in here
+# __exit__ will be called before you get here
