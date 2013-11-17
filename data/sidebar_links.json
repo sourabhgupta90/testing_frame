@@ -1,16 +1,35 @@
 [
    {
       "name":"Development",
-      "url_list":[{
-         "name":"News",
-         "url":"/development"
-      }]
+      "offset": "development",
+      "sidebar_url":"page/development",
+      "url_list":[
+         {
+            "name":"News",
+            "url":"page/development"
+         }
+      ]
    },
    {
-      "name":"JSV",
-      "url_list":[{
-         "name":"Json Validation",
-         "url":"/jsv_validation"
-      }]
+      "name": "JSV",
+      "offset": "jsv_validation",
+      "sidebar_url": "page/jsv_validation",
+      "url_list":[
+         {
+            "name":"Json Validation",
+            "url":"page/jsv_validation"
+         }
+      ]
+   },
+   {
+      "name": "Regular Expression",
+      "offset": "re",
+      "sidebar_url": "page/re",
+      "url_list":[
+         {
+            "name":"Regular Expression",
+            "url":"page/re"
+         }
+      ]
    }
 ]

@@ -25,5 +25,44 @@
             "name":"LF"
          }
       ]
+   },
+   {
+      "class":"Patman",
+      "url_list":[
+         {
+            "url":"https://issues.devcloud.hma.com/secure/Dashboard.jspa",
+            "name":"Dashboard"
+         },
+         {
+            "url":"https://clindocsdev.hmadev.com/",
+            "name":"Dev"
+         }
+         
+      ]
+   },
+   {
+      "class":"Misc",
+      "url_list":[
+         {
+            "url":"webworker",
+            "name":"WebWorker"
+         },
+         {
+            "url":"colander",
+            "name":"Colander And Types"
+         },
+         {
+            "url":"handle_bar",
+            "name":"HandleBar"
+         },
+         {
+            "url":"css-test",
+            "name":"CSS Test"
+         },
+         {
+            "url":"dashboard",
+            "name":"YUI test"
+         }
+      ]
    }
 ]

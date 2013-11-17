@@ -1,5 +1,6 @@
 # Django settings for testing_frame project.
 
+import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -8,6 +9,12 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+PROJECT_DIR = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
+STATIC_DIR = os.path.join(PROJECT_DIR, "static")
+TEMPLATE_DIR = os.path.join(PROJECT_DIR, "templates")
+DATA_DIR = os.path.join(PROJECT_DIR, "data")
+
 
 #username: sourabh
 #email address: sourabh5588gupta@gmail.com
@@ -71,6 +78,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    STATIC_DIR,
 )
 
 # List of finder classes that know how to find static files in
@@ -106,7 +114,10 @@ ROOT_URLCONF = 'testing_frame.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'testing_frame.wsgi.application'
 
+
+
 TEMPLATE_DIRS = (
+    TEMPLATE_DIR,
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -119,11 +130,21 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pipeline',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CSSMinCompressor'
+PIPELINE_CSSMIN_BINARY = 'cssmin'
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.slimit.SlimItCompressor'
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

@@ -1,20 +1,8 @@
-Office
-
-Read about the database one hour P4  
-Store the elements in database
-
-Database architecture
-
-Weekends 
-Connect to server 
+Structure the project
 
 
-when using to much files in project
-Addition of node.js
+git commands
+git status -s
+meld my_project_using_git
 
-
-TEMPLATE_DIRS = (
-    '/path/to/mysite/templates', # Change this to your own directory.
-)
-
-https://docs.djangoproject.com/en/1.5/ref/templates/api/#template-loaders
+git commit -m 'my hola mundo changes'
