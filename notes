@@ -6,3 +6,5 @@ git status -s
 meld my_project_using_git
 
 git commit -m 'my hola mundo changes'
+No change commit the change
+git commit -am 'changes to hello file'

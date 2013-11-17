@@ -1,0 +1,23 @@
+<script src="http://yui.yahooapis.com/3.13.0/build/yui-base/yui-base-min.js"></script>
+<script src="http://yui.yahooapis.com/3.13.0/build/yui-core/yui-core-min.js"></script>
+
+<script>
+
+var LOCAL_CONF = {
+    filter : 'min',
+    base : '/static/libs/yui-3.8.1/',
+    combo : false
+  };
+    
+  var DEV_CONF = {
+    filter : 'raw',
+    base : '/static/libs/yui-3.8.1/',
+    combo : false
+  };
+  
+var Y = YUI(LOCAL_CONF).use('patman-app', function(Y) {
+    
+});
+</script>
+
+
