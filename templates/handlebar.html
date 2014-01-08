@@ -1,19 +1,19 @@
 <html>
     <body>
-        <div class="first">
-            </div>
+        <div class="first"></div>
         <script src="../static/lib/jquery-1.10.2.min.js"></script>
         <script src="../static/js/HandleBar/handlebars-v1.1.2.js"></script>
-        <script id="entry-template" type="text/x-handlebars-template">
+        <script id="entry-template" type="text/x-handlebars-template"">
             <div class="entry">
-              <h1>{{title}}</h1>
-              <div class="body">
-                {{body}}
-              </div>
+            <h1>
+            {% verbatim %}{{ title }}{% endverbatim %}
+            </h1>
+            <div class="body">
+            {% verbatim %}{{body}}{% endverbatim %}
+            </div>
             </div>
         </script>
-        
-        
+
         <script src="../static/js/HandleBar/TestHandleBar.js"></script>
     </body>
 </html>

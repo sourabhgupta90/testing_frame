@@ -1,10 +1,12 @@
-Structure the project
-
-
-git commands
-git status -s
-meld my_project_using_git
-
-git commit -m 'my hola mundo changes'
-No change commit the change
-git commit -am 'changes to hello file'
+It should never take more 10 min to create a testframe
+    JS files FileName, camel case variable
+    Python folder-name,file-name, python_variable
+    html folder-name,file-name , url page-urls
+    
+    Folder on JS
+        Have All Requirements
+    
+    
+    Create Number of MAIN PAGES
+    HandleBar Template
+    Remove all things from integration folder

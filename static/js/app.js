@@ -1,4 +1,9 @@
-YUI().use('app', function (Y) {
-    // App Framework is available and ready for use. Add implementation
-    // code here.
+var app = YUI.use('app',function(Y){
+   var app = Y.app({
+       
+   });
+   app.route('/', function(){
+       Y.one('h1').set('text','Stored Links');
+   }); 
+   app.render().dispatch();
 });

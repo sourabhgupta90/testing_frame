@@ -1,0 +1,12 @@
+Coffin==0.3.7
+django-tastypie==0.10.0
+Django==1.5.4
+colander==1.0a5
+django-pipeline==1.3.0
+argparse==1.2.1
+mimeparse==0.1.3
+python-dateutil==2.1
+six==1.4.1
+translationstring==1.1
+wsgiref==0.1.2
+reportlab==2.7

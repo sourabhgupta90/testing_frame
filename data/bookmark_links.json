@@ -9,11 +9,46 @@
       ]
    },
    {
+      "class":"FrontEnd",
+      "url_list":[
+         {
+            "url":"yui-app",
+            "name":"YUI App"
+         },
+         {
+            "url":"http://net.tutsplus.com/tutorials/javascript-ajax/testing-your-javascript-with-jasmine/",
+            "name":"Jasmine Test Case"
+         }
+      ]
+   },
+   {
+      "class":"AngularJS",
+      "url_list":[
+         {
+            "url":"angular-dashboard",
+            "name":"Angular Dashboard"
+         }
+         
+      ]
+   },
+   {
       "class":"Python",
       "url_list":[
          {
             "url":"http://docs.python.org/2/library/itertools.html",
             "name":"Iterator tools in python"
+         },
+         {
+            "url":"http://hangar.runway7.net/python/decorators-and-wrappers",
+            "name":"decorators-and-wrappers"
+         },
+         {
+            "url":"http://hangar.runway7.net/python/packing-unpacking-arguments",
+            "name":"packing-unpacking-arguments"
+         },
+         {
+            "url":"test-report-lab",
+            "name":"Test Report Lab"
          }
       ]
    },
@@ -36,6 +71,20 @@
          {
             "url":"https://clindocsdev.hmadev.com/",
             "name":"Dev"
+         }
+         
+      ]
+   },
+   {
+      "class":"Ipad-performance",
+      "url_list":[
+         {
+            "url":"user-timings",
+            "name":"User-Timing-Test"
+         },
+         {
+            "url":"https://developers.google.com/analytics/devguides/collection/analyticsjs/user-timings",
+            "name":"User Timings"
          }
          
       ]

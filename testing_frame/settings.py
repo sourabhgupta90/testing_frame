@@ -54,6 +54,7 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
+Intergration_Folder = (os.path.join(PROJECT_DIR, 'intergration_test/'),)
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = ''
@@ -72,6 +73,7 @@ STATIC_ROOT = ''
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
+YUI_URL = '/static/yui/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -86,7 +88,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -96,6 +98,7 @@ SECRET_KEY = 'b6fhi62020j=vcf6!9bzq2x5=ziabj_5imw847#+v$055xg!)b'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    #'testing_frame.common.context_processors.static_settings',
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -137,13 +140,43 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+STATIC_ROOT = os.path.join(PROJECT_DIR,'collected')
 
+PIPELINE = True
+PIPELINE_ENABLED = True
+
+PIPELINE_CSS = {
+    'testing_framecss': {
+        'source_filenames': (r'css/testing_frame.less',),
+        'output_filename': 'css/testing_frame.css',
+    },
+}
+
+PIPELINE_JS = {
+    'testing_frameyui': {
+        'source_filenames': ('libs/yui-patman-all.js',),
+         'output_filename': 'js/testing_frame-yui.js',
+    },
+
+    'testing_framelibs': {
+        'source_filenames': (r'libs/tv4.js',),
+        'output_filename': 'js/testing_frame-libs.js',
+    },
+
+    'testing_framejs': {
+        'source_filenames': ('js/TestingFrontEnd/SimpleYUIAppTest.js',),
+        'output_filename': 'js/testing_frame.js',
+    },
+}
+
+PIPELINE_COMPILERS = (
+  'pipeline.compilers.less.LessCompiler',
+)
+
+PIPELINE_CSS_COMPRESSOR = ''
+PIPELINE_JS_COMPRESSOR = ''
+PIPELINE_DISABLE_WRAPPER = True
 STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
-
-PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CSSMinCompressor'
-PIPELINE_CSSMIN_BINARY = 'cssmin'
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.slimit.SlimItCompressor'
 
 
 # A sample logging configuration. The only tangible logging

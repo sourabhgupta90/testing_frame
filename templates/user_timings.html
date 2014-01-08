@@ -1,0 +1,28 @@
+<html>
+    <head>
+     <script>
+      var _gaq = _gaq || [];
+     
+      _gaq.push(['_setAccount', 'UA-36210394-4']);
+      _gaq.push(['_setDomainName', 'hmadev.com']);
+      _gaq.push(['_trackPageview']);
+    </script>
+    <script>
+        function trackTimingCallback(startTime, location) {
+          var endTime = new Date().getTime();
+          var timeSpent = endTime - startTime;
+          _gaq.push(['_trackTiming', 'jQuery', 'Load Library', timeSpent, 'Google CDN']);
+        };
+    </script>   
+    </head>    
+    
+    
+    
+    <body>
+        <script src="./../static/js/UserTimings/userTimings.js"></script>    
+        
+        
+        
+        
+    </body>    
+</html>
