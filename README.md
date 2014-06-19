@@ -1,4 +1,4 @@
 testing_frame
 =============
 
-testing the application
+testing applications
