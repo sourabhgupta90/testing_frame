@@ -34,4 +34,10 @@ urlpatterns = patterns('',
     url(r'^angular-dashboard$', views.angular_dashboard),
     url(r'^angular_partial/(\w+)$', views.get_angular_partial),
     url(r'^test_routing$', views.test_routing),
+
+    #-------------------------------------------------------------------------
+    #---------------------Add New Independent Apps---------------
+    (r'^backbonejs/', include('backbonejs.urls')),
+    (r'^manytomany/', include('manytomany.urls')),
+    #-------------------------------------------------------------------------
 )
